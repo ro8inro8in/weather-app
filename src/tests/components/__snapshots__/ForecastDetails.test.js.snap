@@ -26,12 +26,12 @@ exports[`ForecastDetails renders correctly 1`] = `
       22°C
     </div>
     <div
-      class="forecast-details__windSpeed"
+      class="forecast-details__wind__speed"
     >
       100
     </div>
     <div
-      class="forecast-details__windDirection"
+      class="forecast-details__wind__direction"
     >
       nw
     </div>
