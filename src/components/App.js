@@ -31,10 +31,10 @@ App.propTypes = {
     PropTypes.shape({
       date: PropTypes.number,
       description: PropTypes.string,
-      icon: PropTypes.number,
+      icon: PropTypes.string,
       temperature: PropTypes.shape({
         max: PropTypes.number,
-        min: PropTypes.string,
+        min: PropTypes.number,
       }),
     })
   ).isRequired,
