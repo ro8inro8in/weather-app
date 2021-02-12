@@ -18,7 +18,6 @@ const ForecastSummaries = ({ forecasts, onForecastSelect }) => {
     </div>
   );
 };
-export default ForecastSummaries;
 
 ForecastSummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
@@ -34,3 +33,5 @@ ForecastSummaries.propTypes = {
   ).isRequired,
   onForecastSelect: PropTypes.func.isRequired,
 };
+
+export default ForecastSummaries;
