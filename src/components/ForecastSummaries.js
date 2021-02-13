@@ -10,7 +10,7 @@ const ForecastSummaries = ({ forecasts, onForecastSelect }) => {
           key={forecast.date}
           date={forecast.date}
           description={forecast.description}
-          icon={forecast.icon}
+          icon={forecast.icon.toString()}
           onSelect={onForecastSelect}
           temperature={forecast.temperature}
         />
@@ -24,7 +24,7 @@ ForecastSummaries.propTypes = {
     PropTypes.shape({
       date: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
-      icon: PropTypes.string.isRequired,
+      icon: PropTypes.number.isRequired,
       temperature: PropTypes.shape({
         max: PropTypes.number,
         min: PropTypes.number,
