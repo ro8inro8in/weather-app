@@ -12,13 +12,21 @@ const App = () => {
   const [location, setLocation] = useState({ city: "", country: "" });
   const [selectedDate, setSelectedDate] = useState(0);
   const [searchText, setSearchText] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    getForecast(searchText, setForecasts, setLocation, setSelectedDate);
+    getForecast(
+      searchText,
+      setForecasts,
+      setLocation,
+      setSelectedDate,
+      setErrorMessage
+    );
   }, []);
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
+
   const handleCitySearch = () => {
     getForecast(searchText, setForecasts, setLocation, setSelectedDate);
   };
@@ -26,7 +34,11 @@ const App = () => {
   const handleForecastSelect = (date) => setSelectedDate(date);
   return (
     <div className="weather-app">
-      <LocationDetails city={location.city} country={location.country} />
+      <LocationDetails
+        city={location.city}
+        country={location.country}
+        errorMessage={errorMessage}
+      />
       <SearchForm
         searchText={searchText}
         setSearchText={setSearchText}
