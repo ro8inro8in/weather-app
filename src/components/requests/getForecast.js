@@ -20,11 +20,12 @@ const getForecast = (
       setSelectedDate(response.data.forecasts[0].date);
       setForecasts(response.data.forecasts);
       setLocation(response.data.location);
+      setErrorMessage("");
     })
     .catch((error) => {
       const { status } = error.response;
       if (status === 404) {
-        setErrorMessage("No such town or city, try again");
+        setErrorMessage("No such town or city, try again!");
         console.error("Location is not valid", error);
       }
       if (status === 500) {

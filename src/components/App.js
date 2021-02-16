@@ -28,7 +28,13 @@ const App = () => {
   );
 
   const handleCitySearch = () => {
-    getForecast(searchText, setForecasts, setLocation, setSelectedDate);
+    getForecast(
+      searchText,
+      setForecasts,
+      setLocation,
+      setSelectedDate,
+      setErrorMessage
+    );
   };
 
   const handleForecastSelect = (date) => setSelectedDate(date);
@@ -44,11 +50,15 @@ const App = () => {
         setSearchText={setSearchText}
         onSubmit={handleCitySearch}
       />
-      <ForecastSummaries
-        forecasts={forecasts}
-        onForecastSelect={handleForecastSelect}
-      />
-      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+      {!errorMessage && (
+        <>
+          <ForecastSummaries
+            forecasts={forecasts}
+            onForecastSelect={handleForecastSelect}
+          />
+          {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+        </>
+      )}
     </div>
   );
 };
