@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: "Open Sans", sans-serif;
+  }
+.forecast-summary {
+    border-radius: 5px 5px 5px 5px;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+.forecast-summary__date {
+    font-size: 20px;
+    color: white; 
+    background-color: #00B4CC;
+    border-radius: 5px 5px 0px 0px;
+     
+}
+.forecast-summary__icon {
+    font-size: 35px;
+    padding: 8px;
+}
+.forecast-summary__icon owm{
+    display: flex;
+    flex-direction: center;
+    
+    font-size: 35px;
+    padding: 20px;
+}
+.forecast-summary button {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 0px 0px 5px 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 500px) {
+    .search-form {
+      width: 100%;
+      position: center;
+      display: flex;
+    }
+  }

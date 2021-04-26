@@ -1,4 +1,25 @@
 .forecast-summaries {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5%;
+}
+
+.forecast-summaries icon{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5%;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  .search-form {
+    width: 100%;
+    position: center;
     display: flex;
-    justify-content: space-between;
   }
+}
